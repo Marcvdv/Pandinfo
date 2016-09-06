@@ -17,7 +17,6 @@ public class WebController {
 		return "index";
 	}
 
-
 	@RequestMapping("/css/")
 	public String css(){
 		return "pandinfo";
