@@ -1,9 +1,9 @@
 package com.example.controller;
 
-import org.springframework.beans.factory.annotation.Autowired;
+//import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ModelAttribute;
+//import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 //import com.example.domain.Person;
@@ -17,8 +17,8 @@ public class WebController {
 		return "index";
 	}
 	
-	@RequestMapping("/pand/**")
-	public void pand(Model model){
+	@RequestMapping("/rosalynn/**")
+	public void rosalynn(Model model){
 		return ;
 	}
 }
