@@ -16,9 +16,9 @@ public class WebController {
 	public String start(Model model){
 		return "index";
 	}
-
-	@RequestMapping("/css/")
-	public String css(){
-		return "pandinfo";
+	
+	@RequestMapping("/pand/**")
+	public void pand(Model model){
+		return ;
 	}
 }
