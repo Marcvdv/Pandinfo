@@ -21,4 +21,19 @@ public class WebController {
 	public void rosalynn(Model model){
 		return ;
 	}
+	
+	@RequestMapping("/dave/**")
+	public void dave(Model model){
+		return ;
+	}
+	
+	@RequestMapping("/yuri/**")
+	public void yuri(Model model){
+		return ;
+	}
+	
+	@RequestMapping("/marc/**")
+	public void marc(Model model){
+		return ;
+	}
 }
