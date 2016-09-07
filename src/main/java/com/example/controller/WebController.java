@@ -1,0 +1,40 @@
+package com.example.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.example.domain.Pand;
+import com.example.service.PandServiceImpl;
+
+@Controller
+public class WebController {
+
+	@Autowired
+	PandServiceImpl pandServiceImpl;
+	
+	@RequestMapping("/")
+	public String start(Model model){
+		model.addAttribute("pand", new Pand());
+		return "index";
+	}
+	
+	@RequestMapping("pandSave")
+		public String savePand(@ModelAttribute("pand")Pand pand, Model model){
+		System.out.println(pand);
+		pandServiceImpl.savePand(pand);
+		model.addAttribute("panden",pandServiceImpl.findAllPanden());
+			return "pand";
+		
+	}
+	
+	@RequestMapping("pand")
+	public String showPanden(Model  model){
+		
+		model.addAttribute("panden",pandServiceImpl.findAllPanden());
+		return "person";
+	}
+
+}
