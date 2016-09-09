@@ -1,21 +1,26 @@
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-spring4-4.dtd">
-<html lang="en" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
-<head><title>person</title></head>
-<body>
-<table >
-<thead>
-<th>straat</th>
-<th>nummer</th>
-<th>soort</th>
-</thead>
-<tbody>
-<tr th:each="pand : ${panden}">
-<td th:text="${pand.straat}"></td>
-        <td th:text="${pand.nummer}"></td>
-        <td th:text="${pand.soort}"></td>
+<html lang="en-UK" xmlns="http://www.w3.org/1999/html" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <title>Pandinfo</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="./css/pandinfo.css" />    
+  </head>
+  <body>
+    <h1>De panden in de database</h1>
+    <table >
+      <thead>
+        <th>straat</th>
+        <th>nummer</th>
+        <th>soort</th>
+      </thead>
+      <tbody>
+        <tr th:each="pand : ${panden}">
+          <td th:text="${pand.straat}"></td>
+          <td th:text="${pand.nummer}"></td>
+          <td th:text="${pand.soort}"></td>
         </tr>
       </tbody>
-</table>
-
-</body>
+    </table>
+  </body>
 </html>

@@ -9,8 +9,15 @@
     <script src="../javascript/pandinfo.js" ></script>
   </head>
   <body>
-    <h1>Pand3.html</h1>
+    <h1>Rosalynn Input Page</h1>
     <p>Deze file staat in templates/pand en heet pand.html</p>
-    <p onmouseover="showAlert()">Bij mouseover moet iets gebeuren</p>
+    <form th:object="${pand}" th:action="pandSave" method="post">
+      <input type="text" th:field="*{straat}" placeholder="straat"/>
+      <input type="text" th:field="*{nummer}" placeholder="nummer"/>
+      <select id="slct" th:field="*{soort}">
+        <option th:each="sort : ${soorten}" th:value="${sort.type}" th:text="${sort.type}" />
+      </select>
+      <input type="submit" value="Submit"/>
+    </form>
   </body>
 </html>
